@@ -1,0 +1,29 @@
+{
+  "realm": "hapi-fhir-testing",
+  "auth-server-url": "https://fhir.curemd.com:4334/",
+  "resource": "test",
+  "credentials": {
+    "secret": "rdYnCxJwlnQiOhFkUkd6YHnZNkBaN10R"
+  },
+  "http-method-as-scope": false,
+  "lazy-load-paths": true,
+  "paths": [
+    {
+      "path": "/fhir/metadata",
+      "enforcement-mode": "DISABLED"
+    },
+    {
+      "path": "/fhir/metadata/",
+      "enforcement-mode": "DISABLED"
+    },
+    {
+      "path": "/metadata/.well-known/smart-configuration",
+      "enforcement-mode": "DISABLED"
+    },
+    {
+      "path": "/fhir/*",
+      "enforcement-mode": "ENFORCING"
+    }
+  ]
+
+}
